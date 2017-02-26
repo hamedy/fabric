@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippet xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Format="1.0.0" xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <Header>
+    <Title>Standard Fabric Dialog</Title>
+    <Author>https://github.com/Sector43/FabricSnippets</Author>
+    <Description>Markup for standard dialog, with support for open/close actions</Description>
+    <Shortcut>fabDialog</Shortcut>
+    <SnippetTypes>
+      <SnippetType>Expansion</SnippetType>
+    </SnippetTypes>
+  </Header>
+  <Snippet>
+    <Code Language="html">
+      <Value><![CDATA[<div class='ms-Dialog '>     <!-- optional classes: ms-Dialog--multiline, ms-Dialog--lgHeader, ms-Dialog--blocking, ms-Dialog--close -->
+    <div class='ms-Dialog-title'>Header Goes Here</div>
+       <div class='ms-Dialog-content'>
+           <p class='ms-Dialog-subText'>Content Goes Here</p>
+    </div>
+    <div class='ms-Dialog-actions'>
+        <button class='ms-Button ms-Dialog-action ms-Button--primary'>
+           <span class='ms-Button-label'>Save</span>
+        </button>
+        <button class='ms-Button ms-Dialog-action>
+           <span class='ms-Button-label'>Cancel</span>
+        </button>
+    </div>
+</div>
+<script type='text/javascript'>
+    var DialogElement = document.querySelector('.ms-Dialog');
+    var dialogComponent = new fabric['Dialog'](DialogElement);
+    dialogComponent.open();
+</script>
+]]></Value>
+    </Code>
+  </Snippet>
+</CodeSnippet>

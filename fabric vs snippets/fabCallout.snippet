@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippet xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Format="1.0.0" xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <Header>
+    <Title>Fabric Callout</Title>
+    <Author>https://github.com/Sector43/FabricSnippets</Author>
+    <Description>Standard Fabric Callout</Description>
+    <Shortcut>fabCallout</Shortcut>
+    <SnippetTypes>
+      <SnippetType>Expansion</SnippetType>
+    </SnippetTypes>
+  </Header>
+  <Snippet>
+    <Code Language="html">
+      <Value><![CDATA[<div id='myCallout' class='ms-Callout is-hidden'>  <!-- Additional classes: ms-Callout--OOBE, ms-Callout--peek  -->
+    <div class='ms-Callout-main'>
+        <div class='ms-Callout-header'>
+            <p class='ms-Callout-title'>All of your favorite people</p>
+        </div>
+        <div class='ms-Callout-inner'>
+            <div class='ms-Callout-content'>
+                <p class='ms-Callout-subText  ms-Callout-subText-- '>Message body is optional. If help documentation is available, consider adding a link to learn more at the bottom.</p>
+            </div>
+            <div class='ms-Callout-actions'>
+                <a class='ms-Link'>Learn more</a>
+            </div>
+        </div>
+    </div>
+</div>
+<button id='openCallout' class='ms-Button '>
+    <span class='ms-Button-label'>Open Callout</span>
+</button> 
+<script type='text/javascript'>
+    var callout = document.getElementById('myCallout');
+    var btn = document.getElementById('openCallout');
+    if(callout && null !== callout){
+        new fabric['Callout'](callout, btn, 'right');
+    }
+</script>
+]]></Value>
+    </Code>
+  </Snippet>
+</CodeSnippet>

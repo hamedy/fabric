@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippet xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Format="1.0.0" xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <Header>
+    <Title>Fabric Pivot</Title>
+    <Author>https://github.com/Sector43/FabricSnippets</Author>
+    <Description>A navigational, layout component that allows users to switch between different sets of content.</Description>
+    <Shortcut>fabPivot</Shortcut>
+    <SnippetTypes>
+      <SnippetType>Expansion</SnippetType>
+    </SnippetTypes>
+  </Header>
+  <Snippet>
+    <Code Language="html">
+      <Value><![CDATA[<div class='ms-Pivot '>     <!--   optional classes: ms-Pivot--tabs, ms-Pivot--large   -->
+  <ul class='ms-Pivot-links'>
+      <li class='ms-Pivot-link is-selected' data-content='uniqueID' title='Title' tabindex='1'>
+        Label
+      </li>
+      <li class='ms-Pivot-link' data-content='uniqueID2' title='Title' tabindex='1'>
+        Label2
+      </li>        
+      <li class='ms-Pivot-link' tabindex='1'>
+        <i class='ms-Pivot-ellipsis ms-Icon ms-Icon--More'></i>
+      </li>
+  </ul>
+    <div class='ms-Pivot-content' data-content='uniqueID'>  <!--uniqueID must match <li> above-->
+      Content for first tab...
+    </div>
+    <div class='ms-Pivot-content' data-content='uniqueID2'>  <!--uniqueID must match <li> above-->
+      Content for second tab...
+    </div>
+    
+</div>
+
+<script type='text/javascript'>
+  var PivotElements = document.querySelectorAll('.ms-Pivot');
+  for(var i = 0; i < PivotElements.length; i++) {
+    new fabric['Pivot'](PivotElements[i]);
+  }
+</script>
+]]></Value>
+    </Code>
+  </Snippet>
+</CodeSnippet>

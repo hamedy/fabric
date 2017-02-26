@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippet xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Format="1.0.0" xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <Header>
+    <Title>Fabric Choice Field Group</Title>
+    <Author>https://github.com/Sector43/FabricSnippets</Author>
+    <Description>Fabric styled radio button group</Description>
+    <Shortcut>fabChoice</Shortcut>
+    <SnippetTypes>
+      <SnippetType>Expansion</SnippetType>
+    </SnippetTypes>
+  </Header>
+  <Snippet>
+    <Code Language="html">
+      <Value><![CDATA[<div class='ms-ChoiceFieldGroup' id='choicefieldgroup' role='radiogroup'>
+    <div class='ms-ChoiceFieldGroup-title'>
+        <label class='ms-Label'>Field Name</label>     <!-- Additional classes: is-required, is-disabled  -->
+    </div>
+    <ul class='ms-ChoiceFieldGroup-list'>
+        <!-- Radiobutton items go here 
+             Use snippet fabRadioItem -->
+    </ul>
+</div>
+<script type='text/javascript'>
+    var ChoiceFieldGroupElements = document.querySelectorAll('.ms-ChoiceFieldGroup');
+    for(var i = 0; i < ChoiceFieldGroupElements.length; i++) {
+       new fabric['ChoiceFieldGroup'](ChoiceFieldGroupElements[i]);
+    }
+</script>
+]]></Value>
+    </Code>
+  </Snippet>
+</CodeSnippet>

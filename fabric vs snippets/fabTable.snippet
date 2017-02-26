@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippet xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Format="1.0.0" xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <Header>
+    <Title>Fabric Table Shell</Title>
+    <Author>https://github.com/Sector43/FabricSnippets</Author>
+    <Description>Fabric Table</Description>
+    <Shortcut>fabTable</Shortcut>
+    <SnippetTypes>
+      <SnippetType>Expansion</SnippetType>
+    </SnippetTypes>
+  </Header>
+  <Snippet>
+    <Code Language="html">
+      <Value><![CDATA[<table class='ms-Table'>     <!--  optional classes: ms-Table--fixed, ms-Table--selectable  -->
+    <!-- Use regular HTML table markup (thead, tbody, tr, td, etc) to build table -->
+</table>
+
+<script type='text/javascript'>
+    var TableElements = document.querySelectorAll('.ms-Table');
+    for(var i = 0; i < TableElements.length; i++) {
+        new fabric['Table'](TableElements[i]);
+    }
+</script>
+]]></Value>
+    </Code>
+  </Snippet>
+</CodeSnippet>

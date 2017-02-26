@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippet xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Format="1.0.0" xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <Header>
+    <Title>Fabric List</Title>
+    <Author>https://github.com/Sector43/FabricSnippets</Author>
+    <Description>Shell for a Fabric List.  Items are placed as indicated in comments</Description>
+    <Shortcut>fabList</Shortcut>
+    <SnippetTypes>
+      <SnippetType>Expansion</SnippetType>
+    </SnippetTypes>
+  </Header>
+  <Snippet>
+    <Code Language="html">
+      <Value><![CDATA[<ul class='ms-List'>     <!-- Could use <ol> tag instead  -->
+
+    <!-- Individual List Items go here
+         Use snippet fabListItem -->
+</ul>
+<script type='text/javascript'>
+    var ListElements = document.querySelectorAll('.ms-List');
+    for(var i = 0; i < ListElements.length; i++) {
+        new fabric['List'](ListElements[i]);
+    }
+    var ListItemElements = document.querySelectorAll('.ms-ListItem');
+    for(var i = 0; i < ListItemElements.length; i++) {
+        new fabric['ListItem'](ListItemElements[i]);
+    }
+</script>
+]]></Value>
+    </Code>
+  </Snippet>
+</CodeSnippet>

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippet xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Format="1.0.0" xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <Header>
+    <Title>Fabric Message Banner</Title>
+    <Author>https://github.com/Sector43/FabricSnippets</Author>
+    <Description>Presents a message to the user, with an optional call to action. The message is typically an error, update, or alert.</Description>
+    <Shortcut>fabMessageBanner</Shortcut>
+    <SnippetTypes>
+      <SnippetType>Expansion</SnippetType>
+    </SnippetTypes>
+  </Header>
+  <Snippet>
+    <Code Language="html">
+      <Value><![CDATA[<div class='ms-MessageBanner is-hidden'>
+    <div class='ms-MessageBanner-content'>
+      <div class='ms-MessageBanner-text'>
+        <div class='ms-MessageBanner-clipper'>
+          You&#x27;ve reached your total storage on OneDrive. Please upgrade your storage plan if you need more storage.
+        </div>
+      </div>
+      <button class='ms-MessageBanner-expand'>
+        <i class='ms-Icon ms-Icon--ChevronDown'></i>
+      </button>
+      <div class='ms-MessageBanner-action'>
+        
+  <button class='ms-Button 
+    ms-Button--primary
+    '>
+    <span class='ms-Button-label'>Get More Storage</span>
+  </button>
+      </div>
+    </div>
+    <button class='ms-MessageBanner-close'>
+      <i class='ms-Icon ms-Icon--Clear'></i>
+    </button>
+  </div>
+  <button class='ms-Button docs-MessageBannerExample-button'>Show the banner</button>
+</div>
+
+<script type='text/javascript'>
+  var MessageBannerExample = document.querySelector('.docs-MessageBannerExample');
+  var MessageBanner = new fabric['MessageBanner'](MessageBannerExample.querySelector('.ms-MessageBanner'));
+  var MessageBannerButton = MessageBannerExample.querySelector('.docs-MessageBannerExample-button');
+  var MessageBannerCloseButton = MessageBannerExample.querySelector('.ms-MessageBanner-close');
+
+  // When clicking the button, open the MessageBanner
+  MessageBannerButton.onclick = function() {
+    MessageBanner.showBanner();
+    this.classList.add('is-hidden');
+  };
+
+  // Hide 'Show the Banner Button' when banner is active
+  MessageBannerCloseButton.addEventListener('click', function(){
+  	setTimeout(function() {
+  		MessageBannerButton.classList.remove('is-hidden');
+  	}, 500);
+  });
+</script>
+]]></Value>
+    </Code>
+  </Snippet>
+</CodeSnippet>

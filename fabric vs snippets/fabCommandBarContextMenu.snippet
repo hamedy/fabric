@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippet xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Format="1.0.0" xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <Header>
+    <Title>Fabric CommandBar ContextMenu</Title>
+    <Author>https://github.com/Sector43/FabricSnippets</Author>
+    <Description>A dropdown menu shown inside a CommandBar</Description>
+    <Shortcut>fabCommandBarContextMenu</Shortcut>
+    <SnippetTypes>
+      <SnippetType>Expansion</SnippetType>
+    </SnippetTypes>
+  </Header>
+  <Snippet>
+    <Code Language="html">
+      <Value><![CDATA[<div class='ms-CommandButton'>
+   <button class='ms-CommandButton-button'  >
+       <span class='ms-CommandButton-icon ms-fontColor-themePrimary'>
+           <i class='ms-Icon ms-Icon--CircleRing'></i></span>
+           <span class='ms-CommandButton-label'>Context Menu</span>
+           <span class='ms-CommandButton-dropdownIcon'>
+               <i class='ms-Icon ms-Icon--ChevronDown'></i></span>
+   </button>
+   <ul class='ms-ContextualMenu  is-opened ms-ContextualMenu--hasIcons'>
+       <!-- Contextual Menu Items Go Here
+            Use snippets fabCommandBarContextualMenuItem and fabContextualMenuDivider    -->
+   </ul>
+</div>
+]]></Value>
+    </Code>
+  </Snippet>
+</CodeSnippet>

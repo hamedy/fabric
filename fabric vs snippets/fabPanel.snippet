@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippet xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Format="1.0.0" xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <Header>
+    <Title>Fabric Panel</Title>
+    <Author>https://github.com/Sector43/FabricSnippets</Author>
+    <Description>Container attached to side of page to support additional actions/information</Description>
+    <Shortcut>fabPanel</Shortcut>
+    <SnippetTypes>
+      <SnippetType>Expansion</SnippetType>
+    </SnippetTypes>
+  </Header>
+  <Snippet>
+    <Code Language="html">
+      <Value><![CDATA[<button class='ms-Button' id='btn'>
+      <span class='ms-Button-label'>Open Panel</span>
+</button>
+<div class='ms-Panel' id='myPanel'>
+    <button class='ms-Panel-closeButton ms-PanelAction-close'>
+        <i class='ms-Panel-closeIcon ms-Icon ms-Icon--Cancel'></i>
+    </button>
+    <div class='ms-Panel-contentInner'>
+        <p class='ms-Panel-headerText'>Panel Header</p>
+        <div class='ms-Panel-content'>
+            <span class='ms-font-m'>Content goes here</span>
+        </div>
+    </div>
+</div>
+
+<script type='text/javascript'>
+    var btn = document.getElementById('btn');
+    var pnl = document.getElementById('myPanel');
+    btn.addEventListener('click', function(i) {
+                new fabric['Panel'](pnl); 
+    });
+</script>
+]]></Value>
+    </Code>
+  </Snippet>
+</CodeSnippet>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippet xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Format="1.0.0" xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <Header>
+    <Title>Fabric Contextual Menu</Title>
+    <Author>https://github.com/Sector43/FabricSnippets</Author>
+    <Description>A context menu, showing options for dividers, sub-menus and disabled and selected items</Description>
+    <Shortcut>fabContextMenu</Shortcut>
+    <SnippetTypes>
+      <SnippetType>Expansion</SnippetType>
+    </SnippetTypes>
+  </Header>
+  <Snippet>
+    <Code Language="html">
+      <Value><![CDATA[<a id='openMenu' href='#'>Open Menu</a>
+<ul class='ms-ContextualMenu  is-hidden'>     <!-- Add class ms-ContextualMenu--multiselect to allow multiple selections -->
+   <!-- Menu items go here
+        Use snippet fabContextualMenuItem or fabContextualMenuDivider-->
+</ul>
+<script type='text/javascript'>
+   var ButtonSubmenuElement = document.getElementById('openMenu');
+   var ContextualMenuSubmenuElement = document.querySelector('.ms-ContextualMenu');
+   var contextualMenu = new fabric['ContextualMenu'](ContextualMenuSubmenuElement, ButtonSubmenuElement);
+</script>
+]]></Value>
+    </Code>
+  </Snippet>
+</CodeSnippet>

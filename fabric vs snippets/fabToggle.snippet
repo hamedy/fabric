@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippet xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Format="1.0.0" xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <Header>
+    <Title>Fabric Toggle</Title>
+    <Author>https://github.com/Sector43/FabricSnippets</Author>
+    <Description>A boolean visualization that allows for users to select between two states, typically on and off</Description>
+    <Shortcut>fabToggle</Shortcut>
+    <SnippetTypes>
+      <SnippetType>Expansion</SnippetType>
+    </SnippetTypes>
+  </Header>
+  <Snippet>
+    <Code Language="html">
+      <Value><![CDATA[<div class='ms-Toggle'>     <!--    optional class: ms-Toggle--textLeft     -->
+    <span class='ms-Toggle-description'>Description</span>
+    <input type='checkbox' id='toggle1' class='ms-Toggle-input' />
+    <label for='toggle1' class='ms-Toggle-field'>
+        <span class='ms-Label ms-Label--off'>Off</span>
+        <span class='ms-Label ms-Label--on'>On</span>
+    </label>
+</div>
+<script type='text/javascript'>
+    var ToggleElements = document.querySelectorAll('.ms-Toggle');
+    for(var i = 0; i < ToggleElements.length; i++) {
+        new fabric['Toggle'](ToggleElements[i]);
+    }
+</script>
+]]></Value>
+    </Code>
+  </Snippet>
+</CodeSnippet>

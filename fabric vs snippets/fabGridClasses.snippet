@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippet xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Format="1.0.0" xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <Header>
+    <Title>Fabric Grid Row Classes</Title>
+    <Author>https://github.com/Sector43/FabricSnippets</Author>
+    <Description>Inserts a cheatsheet of grid styles as a comment</Description>
+    <Shortcut>fabGridClasses</Shortcut>
+    <SnippetTypes>
+      <SnippetType>Expansion</SnippetType>
+    </SnippetTypes>
+  </Header>
+  <Snippet>
+    <Code Language="html">
+      <Value><![CDATA[<!--
+Sizes:             sm < 480; md 480-639; lg 640-1023; xl 1024-1365; xxl 1366-1919; xxxl 1920+
+
+Size classes:      ms-u-sm*, ms-u-md*, ms-u.lg*, ms-u.xl*, ms-u.xxl*, ms-u-xxxl* (* is # of columns, 1-12)
+
+Hidden Classes:    ms-u-hidden* (* is a size: Sm, Md, Lg, Xl, Xxl, Xxxl    <-- Note capitalization)
+                   ms-u-hiddenMdDown, ms-u-hiddenLgDown, ms-u-hiddenXlDown, ms-u-hiddenXxlDown    <-- Note capitalization
+                   ms-u-hiddenMdUp, ms-u-hiddenLgUp, ms-u-hiddenXlUp, ms-u-hiddenXxlUp    <-- Note capitalization
+
+Push/Pull Classes: ms-u-*Push**, ms-u-*Pull**  (* is a size: sm, md, lg, xl, xxl, xxxl.  ** is # of columns, 1-12)
+                   ms-u-*Push0,  ms-u-*Pull0  (resets push/pull. * is a size: sm, md, lg, xl, xxl, xxxl.)
+
+Offset Classes:    ms-u-*Offset**  (* is a size: sm, md, lg, xl, xxl, xxxl.  ** is # of columns, 1-12)
+                   ms-u-*Offset0  (resets Offset. * is a size: sm, md, lg, xl, xxl, xxxl.)
+-->
+]]></Value>
+    </Code>
+  </Snippet>
+</CodeSnippet>

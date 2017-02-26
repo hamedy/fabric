@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippet xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Format="1.0.0" xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <Header>
+    <Title>Fabric Facepile</Title>
+    <Author>https://github.com/Sector43/FabricSnippets</Author>
+    <Description>Sample markup for the Facepile component</Description>
+    <Shortcut>fabFacepile</Shortcut>
+    <SnippetTypes>
+      <SnippetType>Expansion</SnippetType>
+    </SnippetTypes>
+  </Header>
+  <Snippet>
+    <Code Language="html">
+      <Value><![CDATA[<div class='ms-FacePile'>
+    <button class='ms-FacePile-addButton ms-FacePile-addButton--addPerson'>
+        <i class='ms-FacePile-addPersonIcon ms-Icon ms-Icon--AddFriend'></i>
+    </button>
+
+    <!-- Persona components go here, one per person, with optional class added: ms-Persona--facePile  -->
+
+    <button class='ms-FacePile-addButton ms-FacePile-addButton--overflow'>
+        <span class='ms-FacePile-overflowText'>+3</span>
+    </button>
+</div>
+
+<script type='text/javascript'>
+    var FacePileElements = document.querySelectorAll('.ms-FacePile');
+    for(var i = 0; i < FacePileElements.length; i++) {
+        new fabric['FacePile'](FacePileElements[i]);
+    }
+</script>
+]]></Value>
+    </Code>
+  </Snippet>
+</CodeSnippet>

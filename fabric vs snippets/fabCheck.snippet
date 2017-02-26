@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippet xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Format="1.0.0" xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <Header>
+    <Title>Fabric Checkbox</Title>
+    <Author>https://github.com/Sector43/FabricSnippets</Author>
+    <Description>Fabric styled checkbox</Description>
+    <Shortcut>fabCheck</Shortcut>
+    <SnippetTypes>
+      <SnippetType>Expansion</SnippetType>
+    </SnippetTypes>
+  </Header>
+  <Snippet>
+    <Code Language="html">
+      <Value><![CDATA[<div id='myCheckbox' class='ms-CheckBox'>
+    <input tabindex='-1' type='checkbox' class='ms-CheckBox-input' />     <!-- Additional attribute: checked  -->
+    <label role='checkbox' class='ms-CheckBox-field' tabindex='0' aria-checked='false' name='checkboxa'>     <!-- Additional class: is-disabled  -->
+        <span class='ms-Label'>Checkbox Label</span>
+    </label>
+</div>
+<script type='text/javascript'>
+    var CheckBoxElements = document.querySelectorAll('.ms-CheckBox');
+    for(var i = 0; i < CheckBoxElements.length; i++) {
+        new fabric['CheckBox'](CheckBoxElements[i]);
+    }
+</script>
+]]></Value>
+    </Code>
+  </Snippet>
+</CodeSnippet>

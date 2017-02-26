@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippet xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Format="1.0.0" xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <Header>
+    <Title>Fabric Dropdown</Title>
+    <Author>https://github.com/Sector43/FabricSnippets</Author>
+    <Description>Fabric dropdown</Description>
+    <Shortcut>fabDropdown</Shortcut>
+    <SnippetTypes>
+      <SnippetType>Expansion</SnippetType>
+    </SnippetTypes>
+  </Header>
+  <Snippet>
+    <Code Language="html">
+      <Value><![CDATA[<div class='ms-Dropdown  ' tabindex='0'>     <!--   optional class: is-disabled   -->
+    <label class='ms-Label'>Label Goes Here</label>
+    <i class='ms-Dropdown-caretDown ms-Icon ms-Icon--ChevronDown'></i>
+    <select class='ms-Dropdown-select'>
+        <option>--Select--</option>
+        <option>One</option>
+        <option>Two</option>
+        <option>Three</option>
+    </select>
+    </div>
+<script type='text/javascript'>
+    var DropdownHTMLElements = document.querySelectorAll('.ms-Dropdown');
+    for (var i = 0; i < DropdownHTMLElements.length; ++i) {
+        var Dropdown = new fabric['Dropdown'](DropdownHTMLElements[i]);
+    }
+</script>
+]]></Value>
+    </Code>
+  </Snippet>
+</CodeSnippet>

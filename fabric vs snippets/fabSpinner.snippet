@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippet xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Format="1.0.0" xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <Header>
+    <Title>Fabric Spinner</Title>
+    <Author>https://github.com/Sector43/FabricSnippets</Author>
+    <Description>An indeterminate progress/loading indicator</Description>
+    <Shortcut>fabSpinner</Shortcut>
+    <SnippetTypes>
+      <SnippetType>Expansion</SnippetType>
+    </SnippetTypes>
+  </Header>
+  <Snippet>
+    <Code Language="html">
+      <Value><![CDATA[<div class='ms-Spinner' id='spin'>     <!-- Additional class: ms-Spinner--large     -->
+    <div class='ms-Spinner-label' id='spinnerLabel'></div>
+</div>
+
+<script type='text/javascript'>
+    function startSpinner(id, text){
+        var lbl = document.getElementById('spinnerLabel')
+        lbl.innerText = text;
+        var elm = document.getElementById(id);
+        var component = new fabric['Spinner'](elm);
+        elm.style.display = 'block';
+    }
+    startSpinner('spin','Loading...please wait.');
+</script>
+]]></Value>
+    </Code>
+  </Snippet>
+</CodeSnippet>
